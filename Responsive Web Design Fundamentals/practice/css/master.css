@@ -1,8 +1,8 @@
 *{
   outline:1px solid red;
 }
-
 .container{
+  width:100%;
   display:flex;
   flex-wrap:wrap;
 }
@@ -17,32 +17,44 @@
 .light_blue{
   background-color:lightblue;
 }
-
 .green{
   background-color:green;
 }
-
 .red{
   background-color:red;
 }
-
 .orange{
   background-color:orange;
 }
-
-
 @media screen and (min-width:550px){
-  .light_blue, .green{
+  .dark_blue{
+    width:50%;
+    height:inherit;
+  }
+  #container2{
     width:50%;
   }
 }
 
 @media screen and (min-width:1000px){
-  .dark_blue, .light_blue{
-    width:50%;
+  .container{
+    padding:auto;
   }
 
-  .green, .red, .orange{
-    width:33.3333%
+  .dark_blue, .red{
+    width:25%;
+    height:inherit;
   }
+  #container2{
+    order:0;
+  }
+
+  .dark_blue{
+    order:1
+  }
+
+  .red{
+    order:-1
+  }
+
 }
